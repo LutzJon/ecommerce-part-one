@@ -1,3 +1,3 @@
-app.modular("myApp").controller("mainCtrl", function(mainService){
+app.module("myApp").controller("mainCtrl", function(mainService){
 
 });
