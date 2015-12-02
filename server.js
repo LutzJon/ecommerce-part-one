@@ -35,7 +35,7 @@ app.post('/products', function(req, res) {
 	});
 });
 app.put('/products/:id', function(req, res) {
-	db.product.find({_id: mongojs.ObjectId(req.params.id)}, {$set: req.body}, function(err, results){
+	db.product.update({_id: mongojs.ObjectId(req.params.id)}, {$set: req.body}, function(err, results){
       console.log(results);
       res.status(200).end();
 	});

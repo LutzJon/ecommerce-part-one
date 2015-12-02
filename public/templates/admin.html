@@ -1,9 +1,21 @@
 <div > 
   <h1> admin shit </h1>
 </div>
-
-<form>
-  <input type ="text" placeHolder="TITLE" ng-model="newProduct.title">
- <input type ="text" placeHolder="PRICE" ng-model="newProduct.price">
- <button type = "submit" ng-click='addProduct()'>Add Product </button>
- </form>
+<div> 
+   <h1> edit some shit <h1> 
+   <select ng-model = "selectedProduct" ng-options= 'product.title for product in products'>
+     </select>
+     {{selectedProduct}}
+     <form>
+       <input type="text" ng-model= 'selectedProduct.title' placeHolder="TITLE"/>
+       <input type="text" ng-model= 'selectedProduct.price' placeHolder="PRICE"/>
+       <button type="submit" ng-click'updateProduct(selectedProduct._id, selectedProduct)'>UPDATE PRODUCT</button>
+       <button type="submit" ng-click'deleteProduct(selectedProduct._id, selectedProduct)'>DELETE PRODUCT</button>
+</div>
+    <form>
+       <input type ="text" placeHolder="TITLE" ng-model="newProduct.title">
+       <input type ="text" placeHolder="PRICE" ng-model="newProduct.price">
+       <button type = "submit" ng-click='addProduct(newProduct)'>Add Product </button>
+    </form>
+<div>
+   
