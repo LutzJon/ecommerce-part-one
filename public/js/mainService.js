@@ -1,4 +1,4 @@
-angular.module("myApp").service("mainService", function($scope, $http){
+angular.module("myApp").service("mainService", function($http){
    this.getProducts = function() {
    	 return $http ({
    	 	method: 'GET',

@@ -1,6 +1,9 @@
 <h1> Products </h1>
 <ul>
-<li ng-repeat='product in products'> 
-{{}}
-</li>
+  <div ng-repeat='product in products'> 
+    Title: {{product.title}}
+    <br/>
+    Price: {{product.price}}
+  </div>
+  <button ui-sref='admin'> ADMIN ONLY </button>
 </ul>
