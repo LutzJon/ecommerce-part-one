@@ -10,7 +10,7 @@ angular.module("myApp").service("adminService", function($http){
   this.updateProduct = function(id, product){
   return $http({
   		method: 'PUT',
-  		url: '/product/' + id,
+  		url: '/products/' + id,
   		data: product
 
   	})
@@ -18,7 +18,7 @@ angular.module("myApp").service("adminService", function($http){
   this.deleteProduct = function(id) {
   	return $http ({
   		method: 'DELETE',
-  		url: '/product/' + id,
+  		url: '/products/' + id,
   	})
   }
 });
